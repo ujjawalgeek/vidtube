@@ -468,15 +468,15 @@ const channel =await User.aggregate([
     },
     {
      $addFields:{
-                            owner:{
-                                $first: "$owner"
-                            }
-                        }
-                    }
-                ]
-            }
-        }
-    ])
+             owner:{
+           $first: "$owner"
+         }
+       }
+    }
+   ]
+  }
+ }
+])
 
     return res
     .status(200)
