@@ -8,7 +8,7 @@ import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
-router.route("/channelId")
+router.route("/:channelId")
   .post(verifyJWT, subscribeChannel)
   .delete(verifyJWT, unsubscribeChannel);
 
